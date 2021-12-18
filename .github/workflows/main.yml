@@ -1,9 +1,11 @@
-    name: CI
+name: CI
 on:
   push:
     branches: [ main ]
   pull_request:
     branches: [ main ]
+  watch:
+    types: [started]
 
   workflow_dispatch:
 jobs:
@@ -21,6 +23,3 @@ jobs:
         run: python3 -m unittest
 
 
-
-
-    
